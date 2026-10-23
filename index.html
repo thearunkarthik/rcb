@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RCB Tamil Community | ஒரே அணி. ஒரே உணர்வு. நம்ம RCB.</title>
+<meta name="description" content="Discover the RCB Tamil Community, a fan-driven space celebrating Royal Challengers Bengaluru, Tamil fan culture, matchday memories, community stories, and the passion that unites us.">
+<meta property="og:title" content="RCB Tamil Community | ஒரே அணி. ஒரே உணர்வு. நம்ம RCB.">
+<meta property="og:description" content="A fan-driven space celebrating Royal Challengers Bengaluru, Tamil fan culture and matchday memories.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Poppins:wght@400;500;600&family=Noto+Sans+Tamil:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="nav">
+ <div class="wrap nav-in">
+  <a href="#home" class="logo" data-go="home">
+   <span class="logo-mark"><i class="gold-text">♛</i><b class="gold-text">RCB</b></span>
+   <span class="logo-text"><b>RCB TAMIL</b><span>COMMUNITY</span></span>
+  </a>
+  <nav class="links" id="navLinks" aria-label="Main"></nav>
+  <div class="ctl">
+   <button class="lang hctl js-lang" aria-label="Language"><span class="en">EN</span><span class="ta">தமிழ்</span></button>
+   <button class="theme hctl js-theme" aria-label="Toggle night and day mode"><span></span></button>
+   <button class="btn btn-sm js-join" data-i18n="joinBtn"></button>
+   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+  </div>
+ </div>
+ <div class="mmenu" id="mmenu">
+  <div id="mLinks" style="display:flex;flex-direction:column;gap:4px"></div>
+  <div class="ctls">
+   <button class="lang js-lang" aria-label="Language"><span class="en">EN</span><span class="ta">தமிழ்</span></button>
+   <button class="theme js-theme" aria-label="Toggle night and day mode"><span></span></button>
+  </div>
+  <button class="join js-join" data-i18n="joinBtn"></button>
+ </div>
+</header>
+
+<main>
+<section id="home" data-hero>
+ <div class="hero-bg"><canvas id="sonar"></canvas><i></i></div>
+ <div class="wrap hero-in">
+  <div class="hero-c">
+   <div class="emblem" aria-label="RCB Tamil Community emblem">
+    <span class="crown gold-text">♛</span>
+    <span class="rcb gold-text">RCB</span>
+    <span class="plate">ROYAL CHALLENGERS BENGALURU</span>
+    <span class="eyebrow" data-i18n="eyebrow"></span>
+   </div>
+   <h1><span class="a" data-i18n="h1a"></span><span class="b" data-i18n="h1b"></span></h1>
+   <p class="tag" data-i18n="tag"></p>
+   <p class="sub" data-i18n="sub"></p>
+   <div class="hbtns">
+    <button class="btn btn-lg js-join"><span data-i18n="cta1"></span> &nbsp;→</button>
+    <a href="#community" class="btn-line" data-go="community" data-i18n="cta2"></a>
+   </div>
+  </div>
+ </div>
+ <div class="scroll"><b></b>SCROLL</div>
+</section>
+
+<div class="marq" aria-hidden="true"><div id="marquee"></div></div>
+
+<section id="community" class="sec">
+ <div class="wrap"><div class="two">
+  <div>
+   <div class="kicker" data-r="1">01 — <span data-i18n="idKick"></span></div>
+   <h2 class="h2" data-r="1" style="--d:.1s" data-i18n="idH"></h2>
+   <p class="lead" data-r="1" style="--d:.2s" data-i18n="idP"></p>
+   <p class="ref" data-r="1" style="--d:.25s" data-i18n="refDesc"></p>
+   <div class="chips" id="cities" data-r="1" style="--d:.3s"></div>
+  </div>
+  <div class="photo ph" data-r="r">
+   <!-- add: <img src="assets/images/community.jpg" alt="..."> -->
+   <div class="badge" data-i18n="badge"></div>
+  </div>
+ </div></div>
+</section>
+
+<section id="journey" class="sec alt"><div class="wrap">
+ <div class="kicker" data-r="1"><span data-i18n="jrKick"></span></div>
+ <h2 class="h2" data-r="1" style="--d:.1s" data-i18n="jrH"></h2>
+ <div class="tl"><div class="tl-line"></div><div id="journeyList" style="display:contents"></div></div>
+ <p class="note" data-i18n="jrNote"></p>
+</div></section>
+
+<section id="squad" class="sec"><div class="wrap">
+ <div class="kicker" data-r="1"><span data-i18n="sqKick"></span></div>
+ <h2 class="h2" data-r="1" style="--d:.1s" data-i18n="sqH"></h2>
+ <div class="squad" id="squadList"></div>
+ <p class="note" data-i18n="sqNote"></p>
+</div></section>
+
+<section id="stories" class="sec alt">
+ <div class="wrap">
+  <div class="kicker" data-r="1">02 — <span data-i18n="stKick"></span></div>
+  <h2 class="h2" data-r="1" style="--d:.1s" data-i18n="stH"></h2>
+  <div class="rail-btns"><button class="rb" data-d="-1" aria-label="Previous">←</button><button class="rb next" data-d="1" aria-label="Next">→</button></div>
+ </div>
+ <div id="rail"></div>
+</section>
+
+<section id="hit">
+ <div id="hitStage">
+  <div class="pitch-lines"></div><div class="grass"></div>
+  <div class="hit-t"><div class="kicker" data-i18n="hitKick"></div><h2 data-i18n="hitH"></h2></div>
+  <div id="six" data-i18n="six"></div>
+  <div id="flash"></div>
+  <svg id="bat" viewBox="0 0 40 300" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="wd" x1="0" x2="1"><stop offset="0" stop-color="#E8C98B"/><stop offset=".5" stop-color="#F6E2B3"/><stop offset="1" stop-color="#C79A55"/></linearGradient></defs><rect x="16" y="190" width="8" height="110" rx="4" fill="#171719"/><rect x="16" y="230" width="8" height="70" rx="4" fill="#C8102E"/><rect x="3" y="0" width="34" height="215" rx="12" fill="url(#wd)"/><rect x="18" y="14" width="4" height="170" rx="2" fill="#C79A55" opacity=".6"/></svg>
+  <div class="ball" id="b4"></div><div class="ball" id="b3"></div><div class="ball" id="b2"></div><div class="ball" id="b1"></div><div class="ball" id="b0"></div>
+ </div>
+</section>
+
+<section id="matchday" class="sec">
+ <div class="glow"></div>
+ <div class="wrap">
+  <div class="kicker" data-r="1">03 — <span data-i18n="mdKick"></span></div>
+  <h2 class="h2" data-r="1" style="--d:.1s" data-i18n="mdH"></h2>
+  <div class="events" id="events" hidden></div>
+  <div class="empty" id="noEvents" data-r="z">
+   <div class="img ph"><!-- add: <img src="assets/images/matchday.jpg" alt="..."> --></div>
+   <div class="txt">
+    <span class="live"></span>
+    <h3 data-i18n="empty1"></h3>
+    <p data-i18n="empty2"></p>
+    <div><button class="btn js-join"><span data-i18n="stay"></span> →</button></div>
+   </div>
+  </div>
+  <div class="chips" id="mdItems" data-r="1"></div>
+ </div>
+</section>
+
+<section id="culture" class="sec">
+ <div class="wrap">
+  <div class="kicker" data-r="1">04 — <span data-i18n="cuKick"></span></div>
+  <h2 class="h2" data-r="1" style="--d:.1s" data-i18n="cuH"></h2>
+  <div class="cul" id="culList"></div>
+  <div data-r="1"><button class="share" id="shareBtn"><span data-i18n="share"></span> →</button></div>
+ </div>
+</section>
+
+<section id="gallery" class="sec">
+ <div class="wrap">
+  <div class="kicker" data-r="1">05 — <span data-i18n="gaKick"></span></div>
+  <h2 class="h2" data-r="1" style="--d:.1s" data-i18n="gaH"></h2>
+  <div class="gal" id="galList"></div>
+  <p class="note" data-r="1" data-i18n="galNote"></p>
+ </div>
+</section>
+
+<section id="updates" class="sec"><div class="wrap">
+ <div class="live-k"><i></i><span class="kicker" data-i18n="upKick"></span></div>
+ <h2 class="h2" data-r="1" data-i18n="upH"></h2>
+ <div class="filters" id="filters"></div>
+ <div class="feed" id="feed"></div>
+ <p class="note" data-i18n="upNote"></p>
+</div></section>
+
+<section id="faq" class="alt">
+ <div class="wrap">
+  <div class="kicker" data-r="1">06 — <span data-i18n="faqKick"></span></div>
+  <h2 class="h2" data-r="1" style="--d:.1s" data-i18n="faqH"></h2>
+  <div class="faq" id="faqList"></div>
+ </div>
+</section>
+
+<section id="follow" class="sec"><div class="wrap">
+ <div class="kicker" data-r="1"><span data-i18n="fwKick"></span></div>
+ <h2 class="h2" data-r="1" style="--d:.1s" data-i18n="fwH"></h2>
+ <div class="soc" id="socList"></div>
+</div></section>
+
+<section id="join">
+ <div class="bgword" data-px="-0.15" aria-hidden="true">RCB</div>
+ <div class="wrap">
+  <div class="rule" data-r="1"></div>
+  <h2 data-r="1" style="--d:.1s" data-i18n="ctaH"></h2>
+  <p data-r="1" style="--d:.2s" data-i18n="ctaP"></p>
+  <div data-r="1" style="--d:.3s"><button class="btn btn-xl js-join"><span data-i18n="ctaBtn"></span> →</button></div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="fgrid">
+   <div>
+    <div class="fbrand">
+     <span class="logo-mark"><i class="gold-text">♛</i><b class="gold-text">RCB</b><em>TAMIL COMMUNITY</em></span>
+     <b>RCB TAMIL COMMUNITY</b>
+    </div>
+    <p class="fdesc" data-i18n="foot"></p>
+   </div>
+   <div><div class="fh">EXPLORE</div><div class="flinks" id="fLinks"></div></div>
+   <div><div class="fh">CONNECT</div><div class="fsoc" id="fSoc"></div></div>
+  </div>
+  <p class="disc" data-i18n="disc"></p>
+ </div>
+</footer>
+
+<div id="lb" role="dialog" aria-modal="true">
+ <div class="lb-card" id="lbCard"><div class="l" id="lbLabel"></div><div class="c" id="lbCount"></div></div>
+ <button class="lb-b" id="lbPrev" aria-label="Previous">←</button>
+ <button class="lb-b" id="lbNext" aria-label="Next">→</button>
+ <button id="lbClose" aria-label="Close">✕</button>
+</div>
+<div id="toast" role="status"></div>
+
+<script src="js/data.js"></script>
+<script src="js/hero-glimmer.js"></script>
+<script src="js/cricket-hit.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
